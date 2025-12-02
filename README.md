@@ -35,7 +35,7 @@ cd iot-device-emulator
 ```
 
 Install dependencies
-```
+```bash
 sudo pip3 install scapy
 ```
 
@@ -47,23 +47,30 @@ chmod +x iot_emulator.py
 ## Quick Start
 
 Run with auto DHCP mode (recommended)
+```bash
 sudo python3 iot_emulator.py -i eth0 --dhcp-mode auto
+```bash
 
 Run with static IP mode
+```bash
 sudo python3 iot_emulator.py -i ens4 --dhcp-mode static
+```bash
 
 Run for 5 minutes only
+```bash
 sudo python3 iot_emulator.py -i eth0 -d 300
+```bash
 
 Check status
+```bash
 sudo python3 iot_emulator.py -s
-
-text
+```bash
 
 ## Configuration
 
 Edit `iot_devices.json` to customize devices:
 
+```bash
 {
 "network": {
 "interface": "eth0",
@@ -85,32 +92,35 @@ Edit `iot_devices.json` to customize devices:
 }
 ]
 }
+```bash
 
-text
 
 ## Usage Examples
 
 ### Basic Usage
 
 Start emulator on interface ens4
+```bash
 sudo python3 iot_emulator.py -i ens4 --dhcp-mode auto
-
-text
+```
 
 ### Monitor Traffic
 
 In another terminal, capture DHCP traffic
+```bash
 sudo tcpdump -i ens4 -vvv port 67 or port 68
+```
 
 Capture all IoT traffic
+```bash
 sudo tcpdump -i ens4 -n
-
-text
+```
 
 ### Add New Devices
 
 Add to `iot_devices.json`:
 
+```bash
 {
 "id": "new_device",
 "name": "My IoT Device",
@@ -122,8 +132,7 @@ Add to `iot_devices.json`:
 "enabled": true,
 "traffic_interval": 90
 }
-
-text
+```
 
 ## DHCP Modes
 
@@ -132,20 +141,21 @@ text
 - Perfect for testing with DHCP ranges (e.g., 192.168.1.180-200)
 - Captures OFFER and ACK responses
 
+```bash
 sudo python3 iot_emulator.py -i eth0 --dhcp-mode auto
-
-text
+```
 
 ### Static Mode
 - Devices request specific IPs from JSON config (`ip_start` field)
 - Useful for controlled IP assignments
 
+```bash
 sudo python3 iot_emulator.py -i eth0 --dhcp-mode static
-
-text
+```
 
 ## Supported Devices
 
+```bash
 | Vendor | Device Type | Protocols | Cloud Destinations |
 |--------|-------------|-----------|-------------------|
 | Hikvision | Security Camera | ARP, DHCP, HTTP, RTSP, DNS, NTP | hik-connect.com |
@@ -157,6 +167,7 @@ text
 | Google | Nest Thermostat | ARP, DHCP, HTTP, NTP | home.nest.com |
 | Amazon | Echo Dot | ARP, DHCP, HTTP, mDNS, NTP | alexa.amazon.com |
 | Meross | Smart Plug | ARP, DHCP, HTTP | iot.meross.com |
+```
 
 ## Logging
 
@@ -166,6 +177,7 @@ Logs are written to:
 
 Example output:
 
+```bash
 🚀 Starting device: [Hikvision] Hikvision DS-2CD2042FWD (192.168.1.180) [DHCP mode: auto]
 🔄 camera_01: Starting DHCP sequence (mode: auto)...
 📤 camera_01: Sending DHCP DISCOVER (xid: 0x3bbff79e, MAC: 00:12:34:56:78:01)
@@ -178,14 +190,17 @@ Example output:
 ✅ camera_01: Received DHCP ACK from 192.168.1.1
 ✅ camera_01: DHCP sequence completed (current IP: 192.168.1.180)
 ☁️ Cloud HTTPS from camera_01 to 47.88.59.64:443
+```
 
 text
 
 ## Testing with Palo Alto ION v3102
 
 1. **Configure ION DHCP Server**:
+```bash
    - Enable DHCP relay or server on LAN interface
    - Set range (e.g., 192.168.207.180-200)
+```
 
 2. **Enable Device-ID in Prisma SD-WAN**:
    - Navigate to ION settings
@@ -193,9 +208,9 @@ text
    - Configure Strata Logging Service
 
 3. **Run Emulator**:
+```bash
 sudo python3 iot_emulator.py -i ens4 --dhcp-mode auto
-
-text
+```
 
 4. **Verify in Strata Cloud Manager**:
 - Check **IoT Security** dashboard (5-10 min delay)
@@ -204,6 +219,7 @@ text
 
 ## Command-Line Options
 
+```bash
 usage: iot_emulator.py [-h] [-c CONFIG] [-i INTERFACE] [--dhcp-mode {auto,static}]
 [-d DURATION] [-s]
 
@@ -215,7 +231,7 @@ Options:
 -d DURATION Run duration in seconds (default: infinite)
 -s, --status Print device status and exit
 
-text
+```
 
 ## Troubleshooting
 
