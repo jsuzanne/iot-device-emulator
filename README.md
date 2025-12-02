@@ -35,12 +35,14 @@ cd iot-device-emulator
 ```
 
 Install dependencies
+```
 sudo pip3 install scapy
+```
 
 Make script executable
+```bash
 chmod +x iot_emulator.py
-
-text
+```
 
 ## Quick Start
 
