@@ -49,22 +49,22 @@ chmod +x iot_emulator.py
 Run with auto DHCP mode (recommended)
 ```bash
 sudo python3 iot_emulator.py -i eth0 --dhcp-mode auto
-```bash
+```
 
 Run with static IP mode
 ```bash
 sudo python3 iot_emulator.py -i ens4 --dhcp-mode static
-```bash
+```
 
 Run for 5 minutes only
 ```bash
 sudo python3 iot_emulator.py -i eth0 -d 300
-```bash
+```
 
 Check status
 ```bash
 sudo python3 iot_emulator.py -s
-```bash
+```
 
 ## Configuration
 
@@ -92,8 +92,7 @@ Edit `iot_devices.json` to customize devices:
 }
 ]
 }
-```bash
-
+```
 
 ## Usage Examples
 
