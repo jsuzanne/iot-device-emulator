@@ -29,8 +29,10 @@ A Python-based IoT device emulator designed to test Palo Alto Networks SD-WAN an
 ## Installation
 
 Clone the repository
+'''bash
 git clone https://github.com/YOUR_USERNAME/iot-device-emulator.git
 cd iot-device-emulator
+'''
 
 Install dependencies
 sudo pip3 install scapy
