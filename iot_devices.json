@@ -1,0 +1,134 @@
+{
+  "network": {
+    "interface": "ens4",
+    "gateway": "192.168.207.1",
+    "dhcp_server": "192.168.207.1",
+    "subnet_mask": "255.255.255.0"
+  },
+  "devices": [
+    {
+      "id": "camera_01",
+      "name": "Hikvision DS-2CD2042FWD",
+      "vendor": "Hikvision",
+      "type": "security_camera",
+      "mac": "00:12:34:56:78:01",
+      "ip_start": "192.168.207.100",
+      "protocols": ["arp", "dhcp", "http", "rtsp", "cloud", "dns", "ntp"],
+      "enabled": true,
+      "traffic_interval": 60,
+      "description": "Hikvision outdoor camera with cloud"
+    },
+    {
+      "id": "bulb_hue_01",
+      "name": "Philips Hue White A19",
+      "vendor": "Philips",
+      "type": "smart_bulb",
+      "mac": "ec:b5:fa:00:01:01",
+      "ip_start": "192.168.207.101",
+      "protocols": ["arp", "dhcp", "http", "cloud", "dns"],
+      "enabled": true,
+      "traffic_interval": 90,
+      "description": "Philips Hue LED bulb"
+    },
+    {
+      "id": "sensor_temp_01",
+      "name": "Xiaomi LYWSD03MMC",
+      "vendor": "Xiaomi",
+      "type": "temperature_sensor",
+      "mac": "4C:65:A8:00:01:01",
+      "ip_start": "192.168.207.102",
+      "protocols": ["arp", "dhcp", "mqtt", "cloud", "dns"],
+      "enabled": true,
+      "traffic_interval": 120,
+      "mqtt_topic": "iot/sensor/temperature/lab",
+      "description": "Xiaomi sensor with cloud"
+    },
+    {
+      "id": "switch_01",
+      "name": "Sonoff Mini",
+      "vendor": "Sonoff",
+      "type": "smart_switch",
+      "mac": "34:94:54:00:01:01",
+      "ip_start": "192.168.207.103",
+      "protocols": ["arp", "dhcp", "mqtt", "http", "cloud", "dns"],
+      "enabled": true,
+      "traffic_interval": 90,
+      "mqtt_topic": "iot/switch/office",
+      "description": "Sonoff WiFi switch"
+    },
+    {
+      "id": "plug_tp_01",
+      "name": "TP-Link Kasa Smart Plug",
+      "vendor": "TP-Link",
+      "type": "smart_plug",
+      "mac": "50:C7:BF:00:01:01",
+      "ip_start": "192.168.207.104",
+      "protocols": ["arp", "dhcp", "http", "cloud", "dns", "ntp"],
+      "enabled": true,
+      "traffic_interval": 120,
+      "description": "TP-Link smart plug"
+    },
+    {
+      "id": "thermostat_01",
+      "name": "Nest Learning Thermostat",
+      "vendor": "Google",
+      "type": "thermostat",
+      "mac": "18:B4:30:00:01:01",
+      "ip_start": "192.168.207.105",
+      "protocols": ["arp", "dhcp", "http", "cloud", "dns", "ntp"],
+      "enabled": true,
+      "traffic_interval": 300,
+      "description": "Google Nest Thermostat"
+    },
+    {
+      "id": "sensor_motion_01",
+      "name": "Xiaomi RTCGQ01LM",
+      "vendor": "Xiaomi",
+      "type": "motion_sensor",
+      "mac": "34:CE:00:01:01:01",
+      "ip_start": "192.168.207.106",
+      "protocols": ["arp", "dhcp", "mqtt", "cloud", "dns"],
+      "enabled": true,
+      "traffic_interval": 180,
+      "mqtt_topic": "iot/motion/lab",
+      "description": "Xiaomi motion sensor"
+    },
+    {
+      "id": "speaker_01",
+      "name": "Amazon Echo Dot",
+      "vendor": "Amazon",
+      "type": "smart_speaker",
+      "mac": "50:F5:DA:00:01:01",
+      "ip_start": "192.168.207.107",
+      "protocols": ["arp", "dhcp", "http", "mdns", "cloud", "dns", "ntp"],
+      "enabled": true,
+      "traffic_interval": 120,
+      "description": "Amazon Echo Dot"
+    },
+    {
+      "id": "bulb_hue_02",
+      "name": "Philips Hue Color",
+      "vendor": "Philips",
+      "type": "smart_bulb",
+      "mac": "ec:b5:fa:00:01:02",
+      "ip_start": "192.168.207.108",
+      "protocols": ["arp", "dhcp", "http", "cloud", "dns"],
+      "enabled": true,
+      "traffic_interval": 120,
+      "description": "Philips color bulb"
+    },
+    {
+      "id": "plug_meross_01",
+      "name": "Meross Smart Plug",
+      "vendor": "Meross",
+      "type": "smart_plug",
+      "mac": "44:65:0d:00:01:01",
+      "ip_start": "192.168.207.109",
+      "protocols": ["arp", "dhcp", "http", "cloud", "dns"],
+      "enabled": true,
+      "traffic_interval": 90,
+      "description": "Meross WiFi plug"
+    }
+  ]
+}
+
