@@ -1,4 +1,4 @@
-# IoT Device Emulator for Palo Alto SD-WAN
+# IoT Device Emulator for Palo Alto Prisma SD-WAN
 
 A Python-based IoT device emulator designed to test Palo Alto Networks SD-WAN and IoT Security features. Simulates realistic traffic from cameras, sensors, smart home devices, and more.
 
